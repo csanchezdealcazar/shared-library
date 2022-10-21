@@ -1,4 +1,4 @@
-@GrabConfig(systemClassLoader=true )
+
 @Grab("mysql:mysql-connector-java:8.0.31")
 
 import groovy.sql.Sql
