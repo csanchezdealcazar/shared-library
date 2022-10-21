@@ -10,7 +10,7 @@ import com.mysql.jdbc.*
 
 @Grab(group='mysql', module='mysql-connector-java', version='5.1.12')
 class MyDB {
-  def db = Sql.newInstance("jdbc:mysql://hostname/database", "username", "password", "com.mysql.jbc.Driver")
+  def db = Sql.newInstance("jdbc:mysql://hostname/database", "username", "password", "com.mysql.jdbc.Driver")
 
   def getUsers() {
     def results = new HashMap()
