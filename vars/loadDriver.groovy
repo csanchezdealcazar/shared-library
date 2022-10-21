@@ -1,6 +1,6 @@
 
 import groovy.sql.Sql
-import com.mysql.jdbc.*
+
 
 /**
  * A small example script on how to connect to a mysql database in a groovy script.
@@ -10,21 +10,30 @@ import com.mysql.jdbc.*
 
 @Grab(group='mysql', module='mysql-connector-java', version='5.1.12')
 class MyDB {
-  def db = Sql.newInstance("jdbc:mysql://hostname/database", "username", "password", "com.mysql.jdbc.Driver")
+ /* def db = Sql.newInstance("jdbc:mysql://hostname/database", "username", "password", "com.mysql.jdbc.Driver")*/
 
+ 
+
+    Class.forName("com.mysql.jdbc.Driver")
+    def sql = Sql.newInstance("jdbc:mysql://mysql:3306/test_db", "user","passwd", "com.mysql.jdbc.Driver")
+    def rows = sql.execute "select count(*) from test_table;"
+    echo rows.dump()
+
+  
+ /* 
   def getUsers() {
     def results = new HashMap()
     db.eachRow("select number, first, last from user", { user ->
       results.put(user.number, [ number: user.number, firstname: user.first, lastname: user.last])
     })
     return results
-  }
+  }*/
 }
 
 def call (Map Config){
 def mydb = new MyDB()
-mydb.getUsers().each { user 
-  println "$user.key \t $user.value.lastname, \t $user.value.firstname"
-}
+//mydb.getUsers().each { user 
+//  println "$user.key \t $user.value.lastname, \t $user.value.firstname"
+//}
 }
   
