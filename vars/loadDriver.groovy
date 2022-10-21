@@ -1,4 +1,5 @@
 
+import java.sql.DriverManager;
 import groovy.sql.Sql
 
 
@@ -13,11 +14,14 @@ class MyDB {
  /* def db = Sql.newInstance("jdbc:mysql://hostname/database", "username", "password", "com.mysql.jdbc.Driver")*/
 
  
-  Class.forName("com.mysql.jdbc.Driver")
+ 
+ // Class.forName("com.mysql.jdbc.Driver")
   def getUsers() {
-    def sql = Sql.newInstance("jdbc:mysql://mysql:3306/test_db", "user","passwd", "com.mysql.jdbc.Driver")
+ /*   def sql = Sql.newInstance("jdbc:mysql://mysql:3306/test_db", "user","passwd", "com.mysql.jdbc.Driver")
     def rows = sql.execute "select count(*) from test_table;"
-    echo rows.dump()
+    echo rows.dump()*/
+   def conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
+                                   "user=minty&password=greatsqldb");
   }
   
  /* 
