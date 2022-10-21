@@ -9,7 +9,7 @@ import groovy.sql.Sql
  * @author: Marcel Maatkamp (m.maatkamp avec gmail dot com)
  */
 
-@Grab(group='mysql', module='mysql-connector-java', version='5.1.12')
+@Grab(group='mysql', module='mysql-connector-java', version='8.0.31')
 class MyDB {
  /* def db = Sql.newInstance("jdbc:mysql://hostname/database", "username", "password", "com.mysql.jdbc.Driver")*/
 
