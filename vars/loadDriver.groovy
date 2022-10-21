@@ -10,10 +10,10 @@ import groovy.sql.Sql
  */
 //mysql:mysql-connector-java:8.0.31
 
-@Grab(group='mysql', module='mysql-connector-java', version='5.1.25')
+@Grab(group='mysql', module='mysql-connector-java', version='8.0.21')
 class MyDB {
  /* def db = Sql.newInstance("jdbc:mysql://hostname/database", "username", "password", "com.mysql.jdbc.Driver")*/
-def driver = Class.forName("com.mysql.jdbc.Driver").newInstance();
+def driver = Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
  
  
  // Class.forName("com.mysql.jdbc.Driver")
