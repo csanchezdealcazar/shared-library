@@ -14,7 +14,7 @@ import groovy.sql.Sql
 class MyDB {
  /* def db = Sql.newInstance("jdbc:mysql://hostname/database", "username", "password", "com.mysql.jdbc.Driver")*/
 def driver = Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
- 
+def conn = DriverManager.getConnection("jdbc:mysql://localhost/test?user=minty&password=greatsqldb");
  
  // Class.forName("com.mysql.jdbc.Driver")
   def getUsers() {
