@@ -5,6 +5,7 @@ import groovy.sql.Sql
 class MyDB {
 
     def openConnection() {
+     Class.forName("com.mysql.cj.jdbc.Driver").newInstance();   
      def conn = DriverManager.getConnection("jdbc:mysql://localhost/test?user=minty&password=greatsqldb");
     }
 }
