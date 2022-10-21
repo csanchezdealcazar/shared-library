@@ -1,6 +1,6 @@
 
 @Grab("mysql:mysql-connector-java:5.1.25")
-@GrabConfig(systemClassLoader=true)
+
 
 import groovy.sql.Sql;
 import java.util.ServiceLoader;
