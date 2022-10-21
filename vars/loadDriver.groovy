@@ -14,11 +14,11 @@ class MyDB {
 
  
 
-    Class.forName("com.mysql.jdbc.Driver")
+  def getUsers() {
     def sql = Sql.newInstance("jdbc:mysql://mysql:3306/test_db", "user","passwd", "com.mysql.jdbc.Driver")
     def rows = sql.execute "select count(*) from test_table;"
     echo rows.dump()
-
+  }
   
  /* 
   def getUsers() {
@@ -32,8 +32,8 @@ class MyDB {
 
 def call (Map Config){
 def mydb = new MyDB()
-//mydb.getUsers().each { user 
-//  println "$user.key \t $user.value.lastname, \t $user.value.firstname"
-//}
+mydb.getUsers().each { user 
+  println "$user.key \t $user.value.lastname, \t $user.value.firstname"
+}
 }
   
