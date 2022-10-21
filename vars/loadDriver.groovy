@@ -1,5 +1,5 @@
 
-@Grab("mysql:mysql-connector-java:8.0.31")
+@Grab("mysql:mysql-connector-java:5.1.25")
 
 import groovy.sql.Sql
 def call(Map config){
