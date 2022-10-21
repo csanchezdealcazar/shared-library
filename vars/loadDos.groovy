@@ -10,6 +10,6 @@ def call(Map Config){
 
     def logger = LoggerFactory.getLogger('sql')
     logger.info 'Initialize SQL'
-    def sql = Sql.newInstance('jdbc:mysql://localhost:3306/midb, 'USER', 'PASSWORD', 'com.mysql.jdbc.Driver')
+    def sql = Sql.newInstance('jdbc:mysql://localhost:3306/midb', 'USER', 'PASSWORD', 'com.mysql.jdbc.Driver')
     logger.info "Got myself a SQL connection: $sql"
 }
