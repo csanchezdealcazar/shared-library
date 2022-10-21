@@ -20,7 +20,7 @@ class MyDB {
  /*   def sql = Sql.newInstance("jdbc:mysql://mysql:3306/test_db", "user","passwd", "com.mysql.jdbc.Driver")
     def rows = sql.execute "select count(*) from test_table;"
     echo rows.dump()*/
-   Class.forName("com.mysql.jdbc.Driver").newInstance();
+   Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
    def conn = DriverManager.getConnection("jdbc:mysql://localhost/test?user=minty&password=greatsqldb");
   }
   
