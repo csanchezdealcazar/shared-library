@@ -2,15 +2,11 @@
 
 import groovy.sql.Sql;
 import java.util.ServiceLoader;
-import java.sql.*;
+import java.sql.Driver;
 
 def call(Map config){
-
-  Connection conn = null;
-
-    conn =
-       DriverManager.getConnection("jdbc:mysql://localhost/test?user=minty&password=greatsqldb");
-  
-    PreparedStatement preparedStatement = conn.prepareStatement('SELECT * from employee');
-
+ServiceLoader<Driver> loader = ServiceLoader.load(Driver.class);
+sql = Sql.newInstance('jdbc:mysql://localhost:3306/test', 'root', 'root', 'com.mysql.jdbc.Driver')
+sql.execute 'select 1 from dual'
+sql.close()
 }
