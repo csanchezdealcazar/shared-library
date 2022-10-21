@@ -4,7 +4,7 @@
 
 import groovy.sql.Sql;
 import java.util.ServiceLoader;
-import java.sql.Driver;
+import java.sql.*;
 
 def call(Map config){
 ServiceLoader<Driver> loader = ServiceLoader.load(Driver.class);
