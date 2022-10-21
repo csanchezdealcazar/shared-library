@@ -11,6 +11,6 @@ def call(Map config){
     conn =
        DriverManager.getConnection("jdbc:mysql://localhost/test?user=minty&password=greatsqldb");
   
-    PreparedStatement preparedStatement = conn.prepareStatement('SELECT * from employee'));
+    PreparedStatement preparedStatement = conn.prepareStatement('SELECT * from employee');
 
 }
