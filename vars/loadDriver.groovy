@@ -2,7 +2,7 @@
 @Grab("mysql:mysql-connector-java:5.1.25")
 
 import groovy.sql.Sql;
-import java.util.ServiceLoader;
+import java.sql.DriverManager;
 import java.sql.Driver;
 
 def call(Map config){
