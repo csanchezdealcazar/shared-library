@@ -1,5 +1,5 @@
 
-@Grab("mysql:mysql-connector-java:5.1.25")
+@Grab('mysql:mysql-connector-java:5.1.10')
 
 
 import groovy.sql.Sql;
