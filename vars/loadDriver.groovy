@@ -4,8 +4,7 @@
 
 import groovy.sql.Sql;
 import java.util.ServiceLoader;
-import java.sql.Connection;
-import java.sql.Driver;
+import java.sql.*;
 
 def call(Map config){
 
